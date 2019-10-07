@@ -3,8 +3,9 @@ var app = express();
 
 const path = require('path');
 
-app.get('/about',function(req,res){
- res.sendFile(path.join(__dirname+'/about.html'));
+
+app.get('/main',function(req,res){
+ res.sendFile(path.join(__dirname+'/main.html'));
 });
 
 app.get('/index',function(req,res){
@@ -13,6 +14,10 @@ app.get('/index',function(req,res){
 
 app.get('/sitemap',function(req,res){
  res.sendFile(path.join(__dirname+'/sitemap.html'));
+});
+
+app.get('/about',function(req,res){
+ res.sendFile(path.join(__dirname+'/about.html'));
 });
 
 app.listen(3000, function () {
