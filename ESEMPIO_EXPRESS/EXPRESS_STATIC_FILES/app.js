@@ -3,6 +3,8 @@ var app = express();
 
 const path = require('path');
 
+const products = require("./products.json");
+
 
 app.get('/',function(req,res){
  res.sendFile(path.join(__dirname+'/main.html'));
@@ -22,4 +24,9 @@ app.get('/about',function(req,res){
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
+});
+
+app.get('/api/products',function(req,res){
+    console.log(products);
+ res.send(products);
 });
