@@ -1,5 +1,10 @@
 <div style="text-align:center">
+  <h2>Negozio di prodotti:</h2>
   <h1>
-    Here we are: {{results}}!!
+    <ul>
+    <li *ngFor="let product of results">
+      {{ product }}
+    </li>
+  </ul>
   </h1>
 </div>

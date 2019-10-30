@@ -5,6 +5,10 @@ const path = require('path');
 
 const products = require("./products.json");
 
+var cors = require('cors'); //HTTP access control (CORS) for cross origin requests
+
+app.use(cors()); //Setup cors
+
 
 app.get('/',function(req,res){
  res.sendFile(path.join(__dirname+'/main.html'));
